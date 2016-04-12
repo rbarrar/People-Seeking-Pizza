@@ -1,0 +1,18 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.background_image {
+  background-image: url(background_pizza.jpg);
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+
+}
+
+.home_header {
+  color: black;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
