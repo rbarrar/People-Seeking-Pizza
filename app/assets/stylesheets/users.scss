@@ -9,10 +9,22 @@
 
 }
 
-.home_header {
-  color: black;
+.home_page_container {
+  color: white;
   margin: 0;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+div .btn-group {
+  margin-left: 50%;
 }
