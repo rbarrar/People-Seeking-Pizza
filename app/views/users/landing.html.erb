@@ -3,8 +3,46 @@
     <h1 class="home_header text-center"><strong> Welcome to People Seeking Pizza </strong></h1>
     <h2 class="home_header text-center"><strong> Bringing the power of pizza to the people since 2016! </strong></h2>
     <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-primary" id="login_button"><%= link_to "Login", login_path %></button>
-      <button type="button" class="btn btn-primary" id="signup_button"><%= link_to "Signup", signup_path %></button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".login-modal">
+        <p>Login</p><!-- <%= link_to "Login", login_path %> -->
+      </button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".signup-modal">
+        <p>Signup</p>
+      </button>
+    </div>
+  </div>
+  <!-- Signup Modal -->
+  <div class="modal fade signup-modal" tabindex="-1" role="dialog" aria-labelledby="mySignupModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <h1>Signup!</h1>
+
+        <%= form_for :user, url: '/users' do |f| %>
+
+        Name: <%= f.text_field :name %>
+        Email: <%= f.text_field :email %>
+        Password: <%= f.password_field :password %>
+        Password Confirmation: <%= f.password_field :password_confirmation %>
+        <%= f.submit "Submit" %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <!-- Login Modal -->
+  <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="myLoginModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <h1>Login</h1>
+
+        <%= form_tag '/login' do %>
+
+        Email: <%= text_field_tag :email %>
+        Password: <%= password_field_tag :password %>
+        <%= submit_tag "Submit" %>
+
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
