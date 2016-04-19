@@ -2,8 +2,10 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $( document ).ready(function() {
-  $( ".btn-primary" ).on( "click", function() {
-      console.log( "<p> was clicked" );
+  $( "#login_button" ).on( "click", function() {
+      window.location='/login';
   });
-    console.log( "ready!" );
+  $( "#signup_button" ).on( "click", function() {
+      window.location='/signup';
+  });
 });
