@@ -1,0 +1,17 @@
+<%= form_for(@pizza_py) do |f| %>
+  <% if @pizza_py.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pizza_py.errors.count, "error") %> prohibited this pizza_py from being saved:</h2>
+
+      <ul>
+      <% @pizza_py.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
